@@ -1,29 +1,25 @@
 using System;
 
-namespace propiedades
+namespace funciones
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Alumno a = new Alumno();
-            a.PrimerNombre = "Juan";
-            a.SegundoNombre = "Perez";
+            Alumno a = new Alumno(1, "Juan", "Perez");
+            Alumno b = new Alumno(2, "Maria", "Martinez");
 
-            Alumno b = new Alumno();
-            b.Id = 2;
-            b.PrimerNombre = "Maria";
-            b.SegundoNombre = "Martinez";
+            a.inactivarAlumno();
 
-            Alumno c = new Alumno(3);
-            b.PrimerNombre = "Pedro";
+            Console.WriteLine(a.nombreCompleto());
+            Console.WriteLine(b.nombreCompleto());
 
-            Alumno d = new Alumno("Juan", "Jimenez");
+            a.activarAlumno();
 
-            Console.WriteLine(a.Id);
-            Console.WriteLine(b.Id);
-            Console.WriteLine(c.Id);
-            Console.WriteLine(d.PrimerNombre + " " + d.SegundoNombre);
+            Console.WriteLine("");
+
+            Console.WriteLine(a.nombreCompleto());
+            Console.WriteLine(b.nombreCompleto());
         }
     }
 }
