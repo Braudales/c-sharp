@@ -23,13 +23,13 @@ public class DatosdePrueba
 
     private void cargarProductos()
     {
-        Producto p1 = new Producto(1, "Mouse", 250);
+        Producto p1 = new Producto(1, "Mouse", 250 , 15);
         ListadeProductos.Add(p1);
 
-        Producto p2 = new Producto(2, "Teclado", 350);
+        Producto p2 = new Producto(2, "Teclado", 350, 15);
         ListadeProductos.Add(p2);
 
-        Producto p3 = new Producto(3, "Monitor", 4000);
+        Producto p3 = new Producto(3, "Monitor", 4000, 15);
         ListadeProductos.Add(p3);
     }
 
@@ -60,7 +60,7 @@ public class DatosdePrueba
         
         foreach (var producto in ListadeProductos)
         {
-            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio+ " |"+producto.impuesto +"|"+ producto.Preciofinal);
+            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio+ " |"+producto.Impuesto );
         }
 
         Console.ReadLine();
@@ -145,7 +145,7 @@ public class DatosdePrueba
                 Console.WriteLine("Producto no encontrado");
                 Console.ReadLine();
             } else {
-                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio);
+                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio+ "producto incluido con impuesto de: " + producto.Impuesto);
                 nuevaOrden.AgregarProducto(producto);
             }
 
@@ -158,6 +158,7 @@ public class DatosdePrueba
 
         Console.WriteLine("");
         Console.WriteLine("El subtotal de la orden es: " + nuevaOrden.Total);
+        Console.WriteLine("El total con impuesto es: " + nuevaOrden.Impuestos);
         Console.ReadLine();
     }
 
@@ -167,19 +168,19 @@ public class DatosdePrueba
         Console.WriteLine("Lista de Ordenes");
         Console.WriteLine("================");
         Console.WriteLine("");  
-        Console.WriteLine("Codigo | Fecha | Total");
+        Console.WriteLine("Codigo | Fecha | SubTotal | impuesto");
         Console.WriteLine("Cliente | Vendedor");
         Console.WriteLine("======================");
         Console.WriteLine("");  
 
         foreach (var orden in ListaOrdenes)
         {
-            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total);
+            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total+"|"+ orden.Impuestos);
             Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
             
             foreach (var detalle in orden.ListaOrdenDetalle)
             {
-                Console.WriteLine("     " + detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Precio);
+                Console.WriteLine("     " + detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Precio+"|"+detalle.Impuesto);
             }
 
             Console.WriteLine();
