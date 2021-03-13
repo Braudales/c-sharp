@@ -169,7 +169,7 @@ public class DatosdePrueba
         Console.WriteLine("Lista de Ordenes");
         Console.WriteLine("================");
         Console.WriteLine("");  
-        Console.WriteLine("Codigo | Fecha | SubTotal | impuesto");
+        Console.WriteLine("Codigo | Fecha | SubTotal | impuesto | Precio final");
         Console.WriteLine("Cliente | Vendedor");
         Console.WriteLine("======================");
         Console.WriteLine("");  
