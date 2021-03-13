@@ -60,7 +60,7 @@ public class DatosdePrueba
         
         foreach (var producto in ListadeProductos)
         {
-            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio + " |"+producto.Impuesto + " |"+producto.Preciofinal );
+            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio + " |"+producto.Impuesto);
         }
 
         Console.ReadLine();
