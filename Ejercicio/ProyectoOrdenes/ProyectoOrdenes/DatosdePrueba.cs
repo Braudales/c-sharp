@@ -145,7 +145,7 @@ public class DatosdePrueba
                 Console.WriteLine("Producto no encontrado");
                 Console.ReadLine();
             } else {
-                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio + "producto incluido con impuesto de: " + producto.Impuesto);
+                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de : " + producto.Precio + " producto incluido con impuesto de : " + producto.Impuesto);
                 nuevaOrden.AgregarProducto(producto);
             }
 
