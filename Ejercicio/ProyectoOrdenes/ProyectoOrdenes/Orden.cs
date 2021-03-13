@@ -34,7 +34,7 @@ public class Orden
 
         Total += cantidad * producto.Precio;
         Impuestos += cantidad * producto.Precio * producto.Impuesto;
-        Preciosfinal += producto.Precio + producto.Impuesto;
+        Preciosfinal +=(cantidad * producto.Precio * producto.Impuesto)+cantidad * producto.Precio;
     
 
     

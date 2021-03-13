@@ -6,6 +6,8 @@ public class OrdenDetalle
     
     public double Impuesto { get; set; }
 
+    public double Preciofinal { get; set; }
+
 
     
     public Producto Producto { get; set; }
@@ -17,6 +19,7 @@ public class OrdenDetalle
         Producto = producto;
         Precio = producto.Precio;
         Impuesto = producto.Impuesto;
+        Preciofinal = producto.Preciofinal;
     
     
     }
