@@ -5,6 +5,9 @@ public class OrdenDetalle
     public double Precio { get; set; }
     
     public double Impuesto { get; set; }
+
+
+    
     public Producto Producto { get; set; }
 
     public OrdenDetalle(int codigo, int cantidad, Producto producto)
@@ -14,6 +17,7 @@ public class OrdenDetalle
         Producto = producto;
         Precio = producto.Precio;
         Impuesto = producto.Impuesto;
+    
     
     }
 }

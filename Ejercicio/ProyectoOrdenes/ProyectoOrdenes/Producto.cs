@@ -4,7 +4,7 @@ public class Producto
     public string Descripcion { get; set; }
     public double Precio { get; set; }
     public double Impuesto { get; set; }
-
+    
    
     public Producto(int codigo, string descripcion, double precio, double impuesto)
     {
@@ -12,6 +12,7 @@ public class Producto
         Descripcion = descripcion;
         Precio = precio;
         Impuesto = impuesto;
+     
     
     }
 }

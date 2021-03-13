@@ -23,13 +23,13 @@ public class DatosdePrueba
 
     private void cargarProductos()
     {
-        Producto p1 = new Producto(1, "Mouse", 250 , 0.15);
+        Producto p1 = new Producto(1, "Mouse", 250 , 0.15 );
         ListadeProductos.Add(p1);
 
-        Producto p2 = new Producto(2, "Teclado", 350, 0.15);
+        Producto p2 = new Producto(2, "Teclado", 350, 0.15 );
         ListadeProductos.Add(p2);
 
-        Producto p3 = new Producto(3, "Monitor", 4000, 0.15);
+        Producto p3 = new Producto(3, "Monitor", 4000, 0.15 );
         ListadeProductos.Add(p3);
     }
 
@@ -60,7 +60,7 @@ public class DatosdePrueba
         
         foreach (var producto in ListadeProductos)
         {
-            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio+ " |"+producto.Impuesto );
+            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio + " |"+producto.Impuesto );
         }
 
         Console.ReadLine();
@@ -159,6 +159,7 @@ public class DatosdePrueba
         Console.WriteLine("");
         Console.WriteLine("El subtotal de la orden es: " + nuevaOrden.Total);
         Console.WriteLine("El total con impuesto es: " + nuevaOrden.Impuestos);
+        Console.WriteLine("El total con impuesto es: " + nuevaOrden.Preciosfinal);
         Console.ReadLine();
     }
 
@@ -175,12 +176,12 @@ public class DatosdePrueba
 
         foreach (var orden in ListaOrdenes)
         {
-            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total+"|"+ orden.Impuestos);
+            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total+"|"+ orden.Impuestos+"|"+orden.Preciosfinal);
             Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
             
             foreach (var detalle in orden.ListaOrdenDetalle)
             {
-                Console.WriteLine("     " + detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Precio+"|"+detalle.Impuesto);
+                Console.WriteLine("     " + detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Precio+"|"+detalle.Impuesto+"|"+orden.Preciosfinal);
             }
 
             Console.WriteLine();
