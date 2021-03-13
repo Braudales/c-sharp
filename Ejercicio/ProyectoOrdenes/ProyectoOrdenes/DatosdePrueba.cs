@@ -23,13 +23,13 @@ public class DatosdePrueba
 
     private void cargarProductos()
     {
-        Producto p1 = new Producto(1, "Mouse", 250 , 15);
+        Producto p1 = new Producto(1, "Mouse", 250 , 0.15);
         ListadeProductos.Add(p1);
 
-        Producto p2 = new Producto(2, "Teclado", 350, 15);
+        Producto p2 = new Producto(2, "Teclado", 350, 0.15);
         ListadeProductos.Add(p2);
 
-        Producto p3 = new Producto(3, "Monitor", 4000, 15);
+        Producto p3 = new Producto(3, "Monitor", 4000, 0.15);
         ListadeProductos.Add(p3);
     }
 
@@ -145,7 +145,7 @@ public class DatosdePrueba
                 Console.WriteLine("Producto no encontrado");
                 Console.ReadLine();
             } else {
-                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio+ "producto incluido con impuesto de: " + producto.Impuesto);
+                Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio + "producto incluido con impuesto de: " + producto.Impuesto);
                 nuevaOrden.AgregarProducto(producto);
             }
 
