@@ -31,6 +31,6 @@ public class Perro: Mamifero // <- Herencia
 
     private void OtroMetodo() // <- Encapsulamiento
     {
-
+     Console.WriteLine("Es un perro Bravo");
     }
 }
