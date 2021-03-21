@@ -40,8 +40,8 @@ namespace _12_ejercicio_clase_animales
                             
                             Utilidades.EnviarCorreo();
 
-                              Perro p = new Perro();
-                            p.Nombre = "Firulais";
+                             Perro p = new Perro();
+                             p.Nombre = "Firulais";
                             p.Patas = 4;
                              p.EsDomestico = true;
                              p.Comer();
