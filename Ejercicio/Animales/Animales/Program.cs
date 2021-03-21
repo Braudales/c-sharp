@@ -55,6 +55,7 @@ namespace _12_ejercicio_clase_animales
         
                             break;
                             case 2:
+                            Utilidades.EnviarCorreo();
                               Gato g = new Gato();
                               g.Nombre = "Garfield";
                               g.Patas = 4;
@@ -64,6 +65,7 @@ namespace _12_ejercicio_clase_animales
                               g.Maullar();
                             break;
                             case 3:
+                            Utilidades.EnviarCorreo();
                               Mono m = new Mono();
                               m.Nombre = "Litle Monkey";
                               m.Patas= 4 ;
@@ -118,6 +120,7 @@ namespace _12_ejercicio_clase_animales
                               
                             break;
                             case 2:
+                            Utilidades.EnviarCorreo();
                                loro l = new loro();
                              l.Nombre = "Juan";
                              l.Patas = 2;
