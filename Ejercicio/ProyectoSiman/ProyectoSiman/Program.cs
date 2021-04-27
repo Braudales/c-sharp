@@ -40,7 +40,7 @@ namespace _10_Ordenes
                         break;      
                     case "5":
                         datos.ListarOrdenes();
-                        break;                                          
+                        break;                                      
                     default:
                         break;
                 }

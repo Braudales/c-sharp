@@ -145,6 +145,7 @@ public class DatosdePrueba
 
         while(true)
         {
+            
             Console.WriteLine("Ingrese las colonias: ");
             Console.WriteLine("1. Santa Martha: ");
             Console.WriteLine("2. Aldea del Carmen: ");
@@ -193,9 +194,9 @@ public class DatosdePrueba
             {
               
                 Console.WriteLine("     " + detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Precio);
-                Console.WriteLine(detalle.Producto.Descripcion);
-            }
-
+                 
+                           }
+                
             Console.WriteLine();
         } 
 
