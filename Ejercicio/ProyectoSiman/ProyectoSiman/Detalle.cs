@@ -11,7 +11,7 @@ public class OrdenDetalle
         Codigo = codigo;
         Cantidad = cantidad;
         Producto = producto;
-        Precio = producto.Precio;
+        
        
     
     
