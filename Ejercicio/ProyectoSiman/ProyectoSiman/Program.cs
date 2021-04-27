@@ -12,7 +12,8 @@ namespace _10_Ordenes
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Sistema de Ordenes");
+                Console.WriteLine("Sistema de Transporte");
+                 Console.WriteLine("      GAC");
                 Console.WriteLine("==================");
                 Console.WriteLine("");
                 Console.WriteLine("1 - Lista de Colonias");

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.linq;
+
 public class DatosdePrueba
 {
     public List<Producto> ListadeProductos { get; set; }
@@ -24,22 +24,25 @@ public class DatosdePrueba
 
     private void cargarProductos()
     {
+        
         Producto p1 = new Producto(1, "Santa Marta", 50  );
         ListadeProductos.Add(p1);
 
-        Producto p2 = new Producto(2, "Aldea del carmen", 50);
+        Producto p2 = new Producto(2, "Aldea del carmen", 100);
         ListadeProductos.Add(p2);
 
-        Producto p3 = new Producto(3, "De sula",50 );
+        Producto p3 = new Producto(3, "De sula",60 );
         ListadeProductos.Add(p3);
+
+
     }
 
     private void cargarClientes()
     {
-        Cliente c1 = new Cliente(1, "Rocio", "77777");
+        Cliente c1 = new Cliente(1, "Rocio", "9480-0358");
         ListadeClientes.Add(c1);
 
-        Cliente c2 = new Cliente(2, "Catheryn", "99999");
+        Cliente c2 = new Cliente(2, "Catheryn", "9674-2122");
         ListadeClientes.Add(c2);
     }
 
@@ -104,6 +107,8 @@ public class DatosdePrueba
         Console.WriteLine("");
 
         Console.WriteLine("Ingrese el codigo del Colaborador: ");
+        Console.WriteLine("1. Rocio: ");
+        Console.WriteLine("2. Catheryn: ");
         string codigoCliente = Console.ReadLine();
 
         Cliente cliente = ListadeClientes.Find(c => c.Codigo.ToString() == codigoCliente);        
@@ -118,6 +123,8 @@ public class DatosdePrueba
         }
 
         Console.WriteLine("Ingrese el codigo del Transportista: ");
+        Console.WriteLine("1. Toño: ");
+        Console.WriteLine("2. Carlos ");
         string codigoVendedor = Console.ReadLine();
 
         Vendedor vendedor = ListadeVendedores.Find(v => v.Codigo.ToString() == codigoVendedor);
@@ -139,6 +146,9 @@ public class DatosdePrueba
         while(true)
         {
             Console.WriteLine("Ingrese las colonias: ");
+            Console.WriteLine("1. Santa Martha: ");
+            Console.WriteLine("2. Aldea del Carmen: ");
+            Console.WriteLine("3. De sula: ");
             string codigoProducto = Console.ReadLine();
             Producto producto = ListadeProductos.Find(p => p.Codigo.ToString() == codigoProducto);        
             if (producto == null)
@@ -150,7 +160,7 @@ public class DatosdePrueba
                 nuevaOrden.AgregarProducto(producto);
             }
 
-            Console.WriteLine("Desea continuar? s/n");
+            Console.WriteLine("Desea cregistrar otro viaje? s/n");
             string continuar = Console.ReadLine();
             if (continuar.ToLower() == "n") {
                 break;
