@@ -9,7 +9,7 @@ public class Orden
     public Cliente Cliente { get; set; }
     public Vendedor Vendedor { get; set; }
     public List<OrdenDetalle> ListaOrdenDetalle { get; set; }
-    public double Total { get; set; }
+    
   
     
     public Orden(int codigo, DateTime fecha, string numeroOrden, Cliente cliente, Vendedor vendedor)
