@@ -9,7 +9,7 @@ public class Producto
     {
         Codigo = codigo;
         Descripcion = descripcion;
-     
+        Precio = precio;
     
     }
 }
