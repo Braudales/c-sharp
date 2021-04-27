@@ -5,6 +5,6 @@ public class Cliente: Persona
     {
         Codigo = codigo;
         Nombre = nombre;
-       
+        Telefono = telefono;
     }
 }
